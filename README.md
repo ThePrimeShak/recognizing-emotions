@@ -1,11 +1,54 @@
 # Recognizing Emotions
 
-A small university project by [ThePrimeShak](https://www.linkedin.com/in/theprimeshak/) for exploring sentiment in English text. Built with Vue 3, Vite, Sentiment, and ECharts.
+An English sentiment analyzer built with Vue and ECharts as a university project.
 
-Type your own text or choose an example to see the overall sentiment, total score, comparative score, detected words, and a word-by-word chart. Analysis runs entirely in the browser; no backend, API key, or environment variables are required.
+**Live demo:** [Open on Vercel](https://recognizing-emotions-seven.vercel.app)
 
-## How the scores work
+## Overview
 
-The Sentiment package uses an English word lexicon and basic negation handling. Total score is the sum of detected word scores; comparative is that total divided by the number of tokens. Word chips list unique detected words, while the breakdown keeps every occurrence and its contextual score.
+A small university project for exploring lexicon-based sentiment in English text. Analysis runs entirely in the browser.
 
-This is a sentiment experiment, not a general emotion classifier. Unsupported languages, sarcasm, and subtle context may produce misleading or neutral results.
+## Features
+
+- Analyze typed text or choose a built-in example.
+- Display overall sentiment, total score, and comparative score.
+- Show unique positive and negative word chips.
+- Inspect every detected occurrence and its contextual score in a chart.
+
+## Tech stack
+
+Vue 3, JavaScript, Vite, Sentiment, ECharts, Node.js built-in test runner.
+
+## Run locally
+
+Use Node.js 22.12 or newer and npm.
+
+```sh
+git clone https://github.com/ThePrimeShak/recognizing-emotions.git
+cd recognizing-emotions
+npm ci
+npm run dev
+```
+
+## Available scripts
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create the production build |
+| `npm run preview` | Preview the production build |
+| `npm run test` | Run automated tests |
+
+## Project structure
+
+- `src/components/` — sentiment views, charts, and layout.
+- `src/composables/` and `src/utils/` — analysis state and scoring helpers.
+- `tests/` — automated logic tests.
+
+## Scope and limitations
+
+Sentiment uses an English word lexicon and basic negation handling. Comparative score is the total divided by token count. This experiment does not classify general emotions; sarcasm, subtle context, and unsupported languages can produce misleading results. No backend or API key is required.
+
+## Author
+
+Built by [ThePrimeShak](https://github.com/ThePrimeShak) · [LinkedIn](https://www.linkedin.com/in/theprimeshak/).
